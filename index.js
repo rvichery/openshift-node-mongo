@@ -3,7 +3,7 @@ var express = require('express');
 var mongoose = require('mongoose');
 
 var uri = process.env.MONGO_URL;
-global.db = mongoose.createConnection(uri);
+global.db = mongoose.createConnection(uri, { mongos:true });
 
 var app = express();
 
